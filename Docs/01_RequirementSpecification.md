@@ -40,7 +40,6 @@ The third chapter, Requirements Specification sectin, of this document is writte
 Both sections of the document desribe the same software product in its entirety, but are intended for different audience and thus use different language.
 
 # 2.0 Overall Description
-
 ## 2.1 System Environment
 The Library System has two active actors and one cooperating system. 
 
@@ -86,14 +85,13 @@ Description: Users can request to renew materials that they have checked out if 
 7. Managing User Account:  
 Description: Users can view their borrowing history, fines, and update their contact information through their user account.
 
-## 2.3 Non-Functional Requirements
+## 2.3 Non-Functional Requirements Specification
 The Library Management system software and database will be on a server with high speed internet capability. 
 
-In total, three client machines are needed in the library. One for the librarian in the staff desk, and two for users to borrow and return materials. The actual machine specifications will be explained in section ...
+In total, three client machines are needed in the library. One for the librarians in the staff desk, and two for users to borrow and return materials. The actual machine specifications will be explained in section ...
 
 User authentication is required to use any of the system function, except for basic search function, which anybody can access. The server on which the system resides will have its own security to prevent unauthorized write/delete access.
 
-# 3.0 Requirements Specification
-
-## 3.1 External Interface Requirements
-## 3.2 Functional Requirements
+# 3.0 Requirements Specification 
+## 3.1 Functional Requirements
+## 3.2 Non-Functional Requirements
