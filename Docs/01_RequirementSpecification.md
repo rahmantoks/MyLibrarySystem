@@ -33,20 +33,65 @@ More specifically, this system will be able to do the following:
 https://www.ala.org/advocacy/privacy/guidelines/library-management-systems
 
 ## 1.5 Overview of Document
+The next chapter, the Overall Description section, of this document gives an overview of the functionality of the product. It describes the informal requirements and its is used to establish context fot the technical requirements specification in the next chapter.
+
+The third chapter, Requirements Specification sectin, of this document is written primarily for the developer and describes in technical terms the details of the functionality of the product.
+
+Both sections of the document desribe the same software product in its entirety, but are intended for different audience and thus use different language.
 
 # 2.0 Overall Description
 
 ## 2.1 System Environment
+The Library System has two active actors and one cooperating system. 
+
+Users can access the online functions through the internet to check the availability of a certain material and/or reserve it. Users can also extend their lending through the online functions. To borrow or return materials, users has to access the system directly from the library. 
+
+Librarians access the system directly from the library to catalog new materials, manage users account, and generate reports.
 
 ## 2.2 Functional Requirements Specification
+This section outlines the use cases for each of the active actors separately. The reader, the author and the reviewer have only one use case apiece while the editor is main actor in this system.
 
 ### 2.2.1 Librarian Use Case
+1. Administering User Accounts:  
+Description: Libarians can manage user accounts, including creating, suspending, or deactivating accounts, and resetting passwords.
+
+2. Cataloging New Materials:  
+Description: Librarians add new materials to the library's catalog, including books, journals, and digital resources. The system generates unique identifiers and updates the catalog.
+
+3. Inventory Management:  
+Description: Librarians can perform physical inventory checks, update item locations, and mark items as lost or damaged. The system keeps track of inventory changes.
+
+4. Generating Reports:  
+Description: Librarians can generate reports on circulation statistics, inventory status, overdue items, and other library-related data.
 
 ### 2.2.2 Library User Use Case
+1. User Registration:  
+Description: A library user creates a new account by providing personal information and email address. The system verifies the information and issues a unique library ID.
 
-## 2.3 User Characterisctics
+2. Browsing and Searching for Materials:  
+Description: Users search for books, journals, or other materials using various search criteria such as title, author, subject, or keyword. The system displays search results and allows users to browse through available items.
 
-## 2.4 Non-Functional Requirements
+3. Borrowing Materials:  
+Description: A user selects a specific item from the catalog, scans their library card, and checks out the material. The system records the due date for return and updates the item's status.
+
+4. Returning Materials:  
+Description: Users return borrowed materials by scanning their library card and the item's barcode. The system updates the item's status and calculates any late fees, if applicable.
+
+5. Placing Holds/Reservations:  
+Description: A user can place a hold or reserve an item that is currently checked out by another user. The system notifies the user when the item becomes available.
+
+6. Renewing Materials:  
+Description: Users can request to renew materials that they have checked out if there are no holds or reservations on those items. The system extends the due date if renewal is possible.
+
+7. Managing User Account:  
+Description: Users can view their borrowing history, fines, and update their contact information through their user account.
+
+## 2.3 Non-Functional Requirements
+The Library Management system software and database will be on a server with high speed internet capability. 
+
+In total, three client machines are needed in the library. One for the librarian in the staff desk, and two for users to borrow and return materials. The actual machine specifications will be explained in section ...
+
+User authentication is required to use any of the system function, except for basic search function, which anybody can access. The server on which the system resides will have its own security to prevent unauthorized write/delete access.
 
 # 3.0 Requirements Specification
 
