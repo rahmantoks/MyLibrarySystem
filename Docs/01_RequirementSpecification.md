@@ -47,7 +47,7 @@ Users can access the online functions through the internet to check the availabi
 
 Librarians access the system directly from the library to catalog new materials, manage users account, and generate reports.
 
-## 2.2 Functional Requirements Specification
+## 2.2 Use Cases
 This section outlines the use cases for each of the active actors separately. The reader, the author and the reviewer have only one use case apiece while the editor is main actor in this system.
 
 ### 2.2.1 Librarian Use Case
@@ -97,12 +97,11 @@ User authentication is required to use any of the system function, except for ba
 ### 3.1.1 Administer User Accounts
 **ID:** FR-001  
 **Title:** Administer User Accounts  
-**Description:** The Library System shall provide administrative functionality to manage user accounts. Authorized administrators shall have the ability to perform the following actions on user accounts:  
+**Description:** The Library System shall provide administrative functionality to manage user accounts. Authorized librarians shall have the ability to perform the following actions on user accounts:  
 
 **Administer User Accounts Actions:** 
-
 **1. Create User Accounts**
-* Librarian shall be able to create new user accounts by entering the user's:
+* Authorized librarians be able to create new user accounts by entering the user's:
    * Full name
    * Username (unique)
    * Email address (unique)
@@ -111,7 +110,7 @@ User authentication is required to use any of the system function, except for ba
 * The system shall generate unique user ID for each created account.
 
 **2. Modify User Accounts**  
-* Librarians shall have the ability to modify existing user account details, including:
+* Authorized librarians have the ability to modify existing user account details, including:
   * Full name
   * Email address
   * Passord
@@ -119,20 +118,122 @@ User authentication is required to use any of the system function, except for ba
 * Changes made by librarians shall be saved and reflected in the user account information.
 
 **3. Deactivate User Accounts**  
-* Administrators shall be able to deactivate user accounts, preventing users from accessing the system while retaining their account data.
+* Authorized librarians shall be able to deactivate user accounts, preventing users from accessing the system while retaining their account data.
 * Deactivated users shall not be able to log in or use system resources until their account is reactivated.  
 
 **4. Reactivate User Accounts**  
-* Administrators shall have the capability to reactivate previously deactivated user accounts, restoring their access to the system.  
+* Authorized librarians shall have the capability to reactivate previously deactivated user accounts, restoring their access to the system.  
 
 **5. Delete User Accounts**  
-* Administrators shall have the authority to permanently delete user accounts from the system, including all associated data.
+* Authorized librarians  shall have the authority to permanently delete user accounts from the system, including all associated data.
 * A confirmation prompt shall appear before deletion to prevent accidental removal.
 
 **6. Search User Accounts**  
-* Administrators shall be able to search for user accounts based on criteria such as username, email address, or user role.
+* Authorized librarians shall be able to search for user accounts based on criteria such as username, email address, or user role.
 * The system shall display a list of matching user accounts that meet the search criteria.
 
+### 3.1.2 Cataloging New Materials
+**ID:** FR-002  
+**Title:** Cataloging New Materials   
+**Description:** The system shall provide functionality for librarian to catalog new materials, including books, periodicals, and other library resources. This cataloging process involves entering and maintaining essential information about each item in the library's collection.
 
+**Cataloging New Materials Actions:**  
+**1. Add New Material:**
+* Library staff shall be able to add new materials to the library's collection.
+* For each new material, the following information shall be captured:
+  * Title (mandatory)
+  * Author(s)
+  * ISBN (International Standard Book Number) or ISSN (International Standard Serial Number) for periodicals
+  * Publication date
+  * Genre or category (e.g., fiction, non-fiction, reference)
+  * Physical location in the library (e.g., shelf number)
+  * Quantity of copies available
+  * Description or summary
+  * Cover image (optional)
+
+**2. Edit Material Information:** 
+* Library staff shall have the ability to edit and update the information associated with existing materials.
+* Any changes made to material details shall be reflected in the catalog.
+
+**3. Delete Material Records:**
+* Library staff with appropriate privileges shall be able to permanently remove material records from the catalog.
+* A confirmation prompt shall appear before deleting to prevent accidental removal.
+
+**4. Search and Retrieve Material Information:**
+* The system shall provide a search functionality that allows library staff to find materials based on various criteria, including title, author, ISBN/ISSN, genre, and publication date.
+* Search results shall display relevant material details.
+
+**5. Check for Duplicate Entries:**
+* When adding new materials, the system shall perform checks to identify potential duplicate entries to avoid redundancy.
+
+**Validation and Error Handling:**
+**1. Data Validation:** 
+* The system shall validate data entered during the cataloging process to ensure accuracy and completeness.
+* Users shall be alerted to any missing or incorrect information.
+
+**2. Error Handling:**
+* The system shall provide clear error messages and guidance if any cataloging errors occur.
+* It shall allow users to correct errors and resubmit information.
+Access Control:
+
+**Access Control:**  
+**1. Access Control:**
+* Only authorized library staff members with appropriate privileges shall have access to the cataloging functionality.
+* Access control measures shall be in place to protect the integrity of the catalog data.
+
+### 3.1.3 Inventory Management
+**ID:** FR-003
+**Title:** Inventory Management
+**Description:** The system shall provide comprehensive inventory management functionality to enable library staff to efficiently manage the library's collection of materials. This includes tracking, updating, and organizing the library's inventory of books, periodicals, and other resources.
+
+**Inventory Management Actions:**  
+**1. Track Material Status:**  
+* The system shall maintain the status of each material in the library's collection, indicating whether it is available for borrowing, checked out, on hold, in transit, or missing.
+* The status shall be automatically updated when materials are borrowed, returned, or transferred between library branches.
+
+**2. Check In/Out Materials:**  
+* Library staff shall have the ability to check materials in and out on behalf of library patrons.
+* Patrons shall also be able to self-check materials in and out using a self-service kiosk or online portal.
+
+**3. Reserve and Hold Materials:**  
+* Library patrons shall be able to place holds or reservations on materials that are currently checked out.
+* The system shall notify patrons when the reserved materials become available for pick-up.
+
+**4. Renew Materials:**  
+* Patrons shall have the option to renew materials they have borrowed, provided that the materials are not on hold for another patron.
+* Renewal requests shall be subject to renewal limits and overdue fines, if applicable.
+
+**5. Calculate Late Fees:**  
+* The system shall calculate and apply late fees or fines for overdue materials based on defined library policies.
+* Patrons shall be notified of accrued fines and be provided with a mechanism to pay them.
+
+**Inventory Tracking:**  
+**1. Inventory Updates:**  
+* The system shall automatically update the inventory count when materials are added, checked out, returned, or removed from the collection.
+* Manual adjustments shall also be possible for correcting discrepancies.
+
+**2. Material Location Tracking:**  
+* The system shall keep track of the physical location of each material within the library, including shelf numbers and sections.
+
+**Reservation and Requests:**  
+**1. Handling Reservations and Requests:**  
+* The system shall manage reservations and requests for materials efficiently, ensuring fair allocation when multiple patrons request the same item.
+* Priority for reservations shall be based on a predefined order, such as first come, first served.
+
+**Notifications and Alerts:**  
+**1. Notifications:**  
+* The system shall send notifications and alerts to library staff and patrons for various events, such as due date reminders, hold availability, and overdue notices.
+
+**Access Control:**  
+**1. Access Control**
+* Only authorized library staff members shall have access to perform inventory management actions.
+* Access control measures shall be in place to protect the integrity of the inventory data.
+
+### 3.1.4 Functional Requirements  
+**ID:**   
+**Title:**   
+**Description:**   
+**Actions**  
+**Access Control**     
 
 ## 3.2 Non-Functional Requirements
