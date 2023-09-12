@@ -94,4 +94,45 @@ User authentication is required to use any of the system function, except for ba
 
 # 3.0 Requirements Specification 
 ## 3.1 Functional Requirements
+### 3.1.1 Administer User Accounts
+**ID:** FR-001  
+**Title:** Administer User Accounts  
+**Description:** The Library System shall provide administrative functionality to manage user accounts. Authorized administrators shall have the ability to perform the following actions on user accounts:  
+
+**Administer User Accounts Actions:** 
+
+**1. Create User Accounts**
+* Librarian shall be able to create new user accounts by entering the user's:
+   * Full name
+   * Username (unique)
+   * Email address (unique)
+   * Password
+   * User role (e.g., librarian, user)
+* The system shall generate unique user ID for each created account.
+
+**2. Modify User Accounts**  
+* Librarians shall have the ability to modify existing user account details, including:
+  * Full name
+  * Email address
+  * Passord
+  * User role
+* Changes made by librarians shall be saved and reflected in the user account information.
+
+**3. Deactivate User Accounts**  
+* Administrators shall be able to deactivate user accounts, preventing users from accessing the system while retaining their account data.
+* Deactivated users shall not be able to log in or use system resources until their account is reactivated.  
+
+**4. Reactivate User Accounts**  
+* Administrators shall have the capability to reactivate previously deactivated user accounts, restoring their access to the system.  
+
+**5. Delete User Accounts**  
+* Administrators shall have the authority to permanently delete user accounts from the system, including all associated data.
+* A confirmation prompt shall appear before deletion to prevent accidental removal.
+
+**6. Search User Accounts**  
+* Administrators shall be able to search for user accounts based on criteria such as username, email address, or user role.
+* The system shall display a list of matching user accounts that meet the search criteria.
+
+
+
 ## 3.2 Non-Functional Requirements
