@@ -182,8 +182,8 @@ Access Control:
 * Access control measures shall be in place to protect the integrity of the catalog data.
 
 ### 3.1.3 Inventory Management
-**ID:** FR-003
-**Title:** Inventory Management
+**ID:** FR-003  
+**Title:** Inventory Management  
 **Description:** The system shall provide comprehensive inventory management functionality to enable library staff to efficiently manage the library's collection of materials. This includes tracking, updating, and organizing the library's inventory of books, periodicals, and other resources.
 
 **Inventory Management Actions:**  
@@ -229,11 +229,50 @@ Access Control:
 * Only authorized library staff members shall have access to perform inventory management actions.
 * Access control measures shall be in place to protect the integrity of the inventory data.
 
+### 3.1.4 Generating Reports
+**ID:** FR-004   
+**Title:** Generating Reports   
+**Description:** The system shall provide functionality to generate a variety of reports to help library staff and administrators monitor and analyze library operations and collections effectively.  
+**Actions**  
+**Access Control**     
+
+### 3.1.4 Placing Reservations  
+**ID:** FR-005   
+**Title:** Placing Reservations  
+**Description:** The system shall provide functionality for library patrons to place holds or reservations on library materials that are currently checked out or unavailable. This feature enables patrons to reserve materials for future borrowing.  
+**Actions:**  
+**1. Predefined Reports:**  
+* The system shall offer a set of predefined reports commonly needed for library management, including but not limited to:  
+  1. Inventory Summary Report: A summary of the library's entire collection, categorized by type, status, and location.  
+  2. Patron Activity Report: A report detailing patron borrowing and return activities.
+  3. Overdue Materials Report: A list of materials that are currently overdue, including patron details.
+  4. Usage Statistics Report: Statistical data on the library's most borrowed materials, popular genres, and patron demographics.  
+
+**2. Custom Report Creation:**  
+* Library staff and administrators shall have the ability to create custom reports by selecting specific data fields and criteria to include.
+* Custom reports shall be savable and reusable for future reference.
+
+**3. Report Scheduling:**  
+* The system shall allow scheduled generation of reports, such as weekly or monthly, and the automatic delivery of these reports to designated recipients via email.
+
+**4. Export and Printing:**  
+* Generated reports shall be exportable in common formats (e.g., PDF, Excel) and printable for physical records and sharing with stakeholders.
+
+**Report Parameters and Filters:**   
+**1. Report Parameters:**  
+* The system shall prompt users to input necessary parameters when generating custom reports, including date ranges, material types, and other relevant filters.  
+
+
 ### 3.1.4 Functional Requirements  
 **ID:**   
 **Title:**   
 **Description:**   
 **Actions**  
 **Access Control**     
+
+
+
+### Access Control:
+Access to report generation and customization shall be controlled by user roles and permissions, ensuring that only authorized staff and administrators can create and view reports.
 
 ## 3.2 Non-Functional Requirements
